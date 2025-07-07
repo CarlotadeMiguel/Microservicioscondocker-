@@ -10,9 +10,10 @@ services:
       - DB_DATABASE=my_database
       - DB_USERNAME=my_user
       - DB_PASSWORD=my_password
-      # Opcional: variables de correo, clave app, etc.
+      # Puedes añadir aquí la clave si ya la tienes:
+      # - APP_KEY=base64:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     ports:
-      - "80:8000"  # Puedes cambiar el puerto externo si lo necesitas
+      - "80:8000"
     volumes:
       - ./laravel-app:/app
     depends_on:
