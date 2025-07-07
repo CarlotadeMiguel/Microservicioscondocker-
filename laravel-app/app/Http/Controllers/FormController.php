@@ -11,6 +11,7 @@ class FormController extends Controller
 {
     public function submit(Request $request)
     {
+        $snsTopicArn = env('SNS_TOPIC_ARN');
         $data = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
@@ -29,9 +30,10 @@ class FormController extends Controller
             ]);
 
             $sns->publish([
-                'TopicArn' => 'arn:aws:sns:us-east-1:642854116542:sns', // Sustituye por el ARN real de tu SNS
+                'TopicArn' => $snsTopicArn,
                 'Message'  => json_encode($data)
             ]);
+            
         } catch (AwsException $e) {
             // Puedes loguear el error si lo necesitas
         }

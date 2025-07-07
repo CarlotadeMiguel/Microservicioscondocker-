@@ -10,6 +10,7 @@ services:
       - DB_DATABASE=${MYSQL_DATABASE}
       - DB_USERNAME=${MYSQL_USER}
       - DB_PASSWORD=${MYSQL_PASSWORD}
+      - SNS_TOPIC_ARN=${SNS_TOPIC_ARN}
     ports:
       - "80:8000"
     volumes:
