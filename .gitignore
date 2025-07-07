@@ -1,0 +1,30 @@
+# Datos de MySQL (contiene información de la base de datos)
+mysql_data/
+
+# Archivos de configuración con credenciales
+.env
+*.env
+
+# Archivos de claves SSH y PEM
+*.pem
+*.ppk
+labsuser.pem
+
+# Logs de Docker
+*.log
+docker-compose.override.yml
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Archivos temporales
+*.tmp
+*.temp
+*~
+
+# Archivos de respaldo
+*.bak
+*.backup
