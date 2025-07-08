@@ -19,6 +19,7 @@ services:
       - "80:8000"
     volumes:
       - ./laravel-app:/app
+      - ./.env:/app/.env:ro 
     depends_on:
       - mysql
     networks:
