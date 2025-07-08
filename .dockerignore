@@ -1,0 +1,34 @@
+# Composer
+/vendor
+/.env
+/.env.local
+/.env.*.backup
+
+# Node / Frontend
+/node_modules
+/npm-debug.log
+/yarn-error.log
+/public/hot
+/public/storage
+/storage/*.key
+
+# OS / IDE / Editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+/.idea/
+/*.sublime-project
+/*.sublime-workspace
+
+# Docker
+docker-compose.override.yml
+
+# Tests / Logs
+/phpunit.xml
+/storage/logs/*
+/storage/debugbar/*
+/bootstrap/cache/*.php
+
+# Otros
+/.git
