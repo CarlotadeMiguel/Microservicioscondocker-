@@ -1,33 +1,50 @@
-# Datos de MySQL (contiene información de la base de datos)
-mysql_data/
-
-# Archivos de configuración con credenciales
+# Laravel environment files
 .env
-*.env
 
-# Archivos de claves SSH y PEM
-*.pem
-*.ppk
-labsuser.pem
+# Composer dependencies
+/vendor/
 
-# Logs de Docker
-*.log
-docker-compose.override.yml
+# Node dependencies
+/node_modules/
 
-# Archivos del sistema operativo
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# Laravel storage logs and caches (se incluyen los .gitignore para que no se borren las carpetas)
+storage/*.log
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
 
-# Archivos temporales
+# Backup and temp files
+*.bak
+*.backup
 *.tmp
 *.temp
 *~
 
-# Archivos de respaldo
-*.bak
-*.backup
+# OS generated files
+.DS_Store
+Thumbs.db
 
-node_modules/
-vendor/
+# IDEs and editors
+.vscode/
+.idea/
+
+# Docker logs and overrides
+*.log
+docker-compose.override.yml
+
+# Docker persistent volume data for MySQL (no subir datos de base de datos)
+mysql_data/
+
+# SSH keys and private keys
+*.pem
+*.ppk
+labsuser.pem
+
+# Entrypoint script logs or cache if any
+entrypoint.sh~
+
+# Laravel specific cache and config files (si quieres limpiar caché en el contenedor es mejor, no subirlos)
+bootstrap/cache/*.php
+
+# Otros archivos generados o temporales que no quieras subir
+

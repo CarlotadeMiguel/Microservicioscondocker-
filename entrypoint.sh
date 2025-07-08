@@ -1,5 +1,5 @@
-# microservicioscondocker/entrypoint.sh
 #!/bin/bash
+# microservicioscondocker/entrypoint.sh
 set -e
 
 # Función para esperar a que MySQL esté listo
@@ -36,4 +36,3 @@ php artisan view:cache
 # 5. Lanzar el servidor (proceso principal de Bitnami)
 echo "🚀 Iniciando servidor Laravel (Bitnami)..."
 exec /opt/bitnami/scripts/laravel/run.sh
-
