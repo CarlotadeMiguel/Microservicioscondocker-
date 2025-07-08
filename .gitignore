@@ -28,3 +28,6 @@ Thumbs.db
 # Archivos de respaldo
 *.bak
 *.backup
+
+node_modules/
+vendor/
