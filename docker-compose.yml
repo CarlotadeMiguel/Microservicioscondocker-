@@ -2,10 +2,12 @@ version: '3.9'
 
 services:
   laravel:
-    image: bitnami/laravel:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: laravel_app
     env_file:
-      - ./.env  
+      - ./.env
     environment:
       - DB_HOST=mysql
       - DB_PORT=3306
@@ -17,6 +19,7 @@ services:
       - "80:8000"
     volumes:
       - ./laravel-app:/app
+      - ./.env:/app/.env:ro 
     depends_on:
       - mysql
     networks:
